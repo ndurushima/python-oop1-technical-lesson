@@ -1,2 +1,1 @@
-class Dog:
-  pass
+# Dog model goes here
