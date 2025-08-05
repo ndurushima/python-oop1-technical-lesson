@@ -12,6 +12,17 @@ class Dog:
     def birthday_celebration(self):
         self.age += 1
         print(f"{self.name} is turning {self.age}")
+    
+    def get_age(self):
+        return self.age
+    
+    def set_age(self, value):
+        if type(value) is int and 0 <= value:
+            self._age = value
+        else:
+            print("Not valid age")
+    
+    age = property(get_age, set_age)
 
 fido = Dog("Fido", "Golden Retriever", 3, "05/22/2022")
 
