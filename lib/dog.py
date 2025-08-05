@@ -14,7 +14,7 @@ class Dog:
         print(f"{self.name} is turning {self.age}")
     
     def get_age(self):
-        return self.age
+        return self._age
     
     def set_age(self, value):
         if type(value) is int and 0 <= value:
@@ -39,3 +39,6 @@ print(fido.age)
 print(clifford.last_checkup)
 clifford.checkup("03/02/2024")
 print(clifford.last_checkup)
+
+balto = Dog("Balto", "Husky", "Not an age")
+steele = Dog("Steele", "Husky", -10)
